@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.BistrotLaPlaya.model.Clienti;
-import com.example.BistrotLaPlaya.repository.clientiRepositpory;
+import com.example.BistrotLaPlaya.repository.ClientiRepositpory;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +24,7 @@ public class ClientiController {
     
     @GetMapping("/all")
     public String listClienti(@RequestParam Model model) {
-        List<Clienti> clienti = clientiRepositpory.findAll();
+        List<Clienti> clienti = ClientiRepositpory.findAll();
         model.addAttribute("clienti", clienti);
         return new String();
     }

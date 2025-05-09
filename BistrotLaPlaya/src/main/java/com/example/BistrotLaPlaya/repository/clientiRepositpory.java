@@ -1,5 +1,14 @@
-package com.example.BistrotLaPlaya.controller;
+package com.example.BistrotLaPlaya.repository;
 
-public class clientiRepositpory {
+import java.util.List;
+
+import com.example.BistrotLaPlaya.model.Clienti;
+
+public class ClientiRepositpory extends JpaRepository<Clienti, Long> {
+
+    public static List<Clienti> findAll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+    }
 
 }
